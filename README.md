@@ -1,6 +1,7 @@
 Discord Bot with built in Embeds that uses Euler API Free Plan (https://www.eulerstream.com/) to periodically check whether or not a user is Live, then using Discord.js to send the notifications to a discord channel ID you provid. 
 
 Example of the User Live Embed, auto detects when the user goes live, only needing their username, checks every 90~ seconds, so it can stay under the 1000 daily API requests. 
+
 <img width="486" height="689" alt="image" src="https://github.com/user-attachments/assets/ad185586-49b0-4967-ab0f-13fa484aa911" />
 
 
