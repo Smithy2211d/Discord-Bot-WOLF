@@ -120,7 +120,6 @@ async function recordRequest() {
     logEvent(`📊 ${requestState.count}/${REQUEST_LIMIT} requests used today.`, "gray");
   }
 
-  // Early warning at 900 requests
   if (requestState.count === WARNING_THRESHOLD) {
     await notifyOwner(
       `⚠️ You've reached **${WARNING_THRESHOLD}/${REQUEST_LIMIT}** API requests for today.`,
@@ -128,7 +127,6 @@ async function recordRequest() {
     );
   }
 
-  // Hard stop warning
   if (requestState.count === REQUEST_LIMIT) {
     await notifyOwner(
       `🚫 **Daily API request limit (${REQUEST_LIMIT}) reached!** No new connections will be made until reset.`,
@@ -468,16 +466,3 @@ client.once("ready", async () => {
 });
 
 client.login(process.env.DISCORD_TOKEN);
-
-
-
-
-
-
-
-
-
-
-
-
-
